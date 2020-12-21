@@ -1,10 +1,6 @@
 backcall==0.2.0
 Flask==1.1.2
-flatbuffers==1.12
-grpcio==1.32.0
 h5py==2.10.0
-hyperlink==20.0.1
-idna==2.10
 ipykernel==5.3.0
 ipython==7.16.1
 ipython-genutils==0.2.0
@@ -21,10 +17,7 @@ Markdown==3.2.2
 MarkupSafe==1.1.1
 notebook==6.0.3
 numpy==1.18.5
-oauthlib==3.1.0
 opencv-python==4.2.0.34
-opt-einsum==3.3.0
-packaging==20.4
 pandas==1.0.5
 pandocfilters==1.4.2
 requests==2.24.0
