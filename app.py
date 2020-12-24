@@ -76,9 +76,9 @@ def confidence_value(ref_encode, img_encode, thres=threshold):
 # # =================
 
 
-# @app.route('/')
-# def home():
-#     return render_template('index.html')
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 
 @app.route('/predict', methods=['POST', 'GET'])
