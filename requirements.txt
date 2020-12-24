@@ -16,7 +16,7 @@ Keras==2.4.3
 Keras-Preprocessing==1.1.2
 notebook==6.0.3
 numpy==1.18.5
-opencv-python==4.2.0.34
+opencv-python-headless==4.2.0.34
 pandas==1.0.5
 pandocfilters==1.4.2
 requests==2.24.0
