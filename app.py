@@ -2,6 +2,8 @@ from flask import Flask, render_template, request
 import numpy as np
 import cv2
 import keras
+from keras.models import model_from_json
+from keras.models import load_model
 import tensorflow as tf
 
 # ===============
@@ -20,9 +22,13 @@ def triplet_loss(y_true, y_pred, alpha=0.2):
 
     return loss
 
+json_file = open('./model.json', 'r')
+loaded_model_json = json_file.read()
+json_file.close()
+triplet_model = model_from_json(loaded_model_json)
 
-triplet_model = keras.models.load_model(
-    './face_verification.h5', custom_objects={'triplet_loss': triplet_loss})
+# triplet_model = keras.models.load_model(
+#     './face_verification.h5', custom_objects={'triplet_loss': triplet_loss})
 
 # ======================
 
