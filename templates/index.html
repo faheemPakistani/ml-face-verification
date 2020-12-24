@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="{{url_for('static', filename='./jquery-3.4.1.min.js')}}"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Face Verification</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='./styles.css')}}"
+    />
+  </head>
+  <body>
+    <form
+      id="send"
+      action="/predict"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div class="profile-pic">
+        <img
+          src="{{url_for('static', filename='image_avatar.jpg')}}"
+          id="photos"
+        />
+        <input type="file" id="files" name="files" onchange="readURL(this)" />
+        <label for="files" id="uploadBtns">Choose Photo</label>
+      </div>
+      <div class="profile-pic-div">
+        <img
+          src="{{url_for('static',filename='image_avatar.jpg')}}"
+          id="photo"
+        />
+        <input type="file" id="file" name="file" onchange="readURL(this)" />
+        <label for="file" id="uploadBtn">Choose Photo</label>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <h1>{{Submit}}</h1>
+    <script src="{{url_for('static', filename='myscript.js')}}"></script>
+    <script>
+      uploadBtn.addEventListener("click", function () {
+        a = 1;
+      });
+      uploadBtns.addEventListener("click", function () {
+        a = 2;
+      });
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.addEventListener("load", function (e) {
+            if (a > 1) {
+              $("#photos").attr("src", e.target.result);
+            } else {
+              $("#photo").attr("src", e.target.result);
+            }
+          });
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
+  </body>
+</html>
