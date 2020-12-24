@@ -1,5 +1,5 @@
 {
-  "main": "build/bin/www.js"
+ 
   "name": "restfulapi",
   "version": "1.0.0",
   "private": true,
@@ -21,8 +21,4 @@
     "mongoose": "^5.9.15",
     "morgan": "~1.9.1"
   }
-  "engines": {
-    "node": "0.10.41",
-    "npm": "1.4.29"
-}
 }
