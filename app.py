@@ -65,7 +65,7 @@ def img_to_encoding(image_path, model):
     img = image_path[..., ::-1]
     img = np.around(np.transpose(img, (2, 0, 1))/255.0, decimals=12)
     x_train = np.array([img])
-    embedding = model.predict_on_batch(x_train)
+    embedding = model.predict(x_train)
     return embedding
 # ========================
 
