@@ -1,9 +1,10 @@
 {
+  "main": "build/bin/www.js"
   "name": "restfulapi",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ."
   },
   "dependencies": {
     "@hapi/joi": "^17.1.1",
