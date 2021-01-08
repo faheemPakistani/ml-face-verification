@@ -5,6 +5,7 @@ import keras
 from keras.models import model_from_json
 from keras.models import load_model
 import tensorflow as tf
+keras.backend.set_image_data_format('channels_first')
 
 # ===============
 
